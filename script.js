@@ -53,22 +53,47 @@ else{
     console.log("???");
 }
 
+// fibo
 {
-    let n = 5;
+    // fibo for
+    let n = 2;
     let f1=0;
     let f2=1;
     let f;
-    if(n=0){
+    if(n==0){
         f=0;
     }
-    else if(n=1){
+    else if(n==1){
         f=1;
     }
-    else if(n>=3){
-        for(let i=1;i<=n-2;i++){
+    else if(n>=2){
+        for(let i=1;i<=n-1;i++){
             f=f1+f2;
             f1=f2;
             f2=f;
+        }
+    }
+    console.log(f);
+}
+{
+    // fibo while
+    let n = 2;
+    let f1=0;
+    let f2=1;
+    let f;
+    let temp = 1;
+    if(n==0){
+        f=0;
+    }
+    else if(n==1){
+        f=1;
+    }
+    else if(n>=2){
+        while(temp<=n-1){
+            f=f1+f2;
+            f1=f2;
+            f2=f;
+            temp++;
         }
     }
     console.log(f);
