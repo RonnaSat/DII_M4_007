@@ -52,3 +52,24 @@ if(m>=0){
 else{
     console.log("???");
 }
+
+{
+    let n = 5;
+    let f1=0;
+    let f2=1;
+    let f;
+    if(n=0){
+        f=0;
+    }
+    else if(n=1){
+        f=1;
+    }
+    else if(n>=3){
+        for(let i=1;i<=n-2;i++){
+            f=f1+f2;
+            f1=f2;
+            f2=f;
+        }
+    }
+    console.log(f);
+}
