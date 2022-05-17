@@ -28,16 +28,27 @@ console.log(tax)
 
 let n = 6;
 let fac = 1;
-for(let i = 1;i<=n;i++){
-    fac = fac*i;
+if(n>=0){
+    for(let i = 1;i<=n;i++){
+        fac = fac*i;
+    }
+    console.log(n+"! = "+fac);
 }
-console.log(n+"! = "+fac);
+else{
+    console.log("???");
+}
 
-let m = 5;
+
+let m = -1;
 let fac2 = 1;
 let i = 1;
-while(i<=m){
-    fac2 = fac2*i;
-    i++;
+if(m>=0){
+    while(i<=m){
+        fac2 = fac2*i;
+        i++;
+    }
+    console.log(m+"! = "+fac2);
 }
-console.log(m+"! = "+fac2);
+else{
+    console.log("???");
+}
