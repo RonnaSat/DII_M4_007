@@ -1,11 +1,18 @@
-function alert1(){
+function alert1() {
     alert("let me see ...");
 }
 let ok = document.getElementById("ok")
 let cancel = document.getElementById("cancel")
-ok.addEventListener("click", function(e){
+let showDate = document.getElementById("showDate")
+ok.addEventListener("click", function (e) {
     alert("let me see ...")
 })
-cancel.addEventListener("click", function(e){
+cancel.addEventListener("click", function (e) {
     alert("not ok ...")
+})
+showDate.addEventListener("click", function (e) {
+    document.getElementById("emtySpace").innerText = Date();
+})
+showDate.addEventListener("dblclick", function (e) {
+    document.getElementById("emtySpace").innerText = "";
 })
