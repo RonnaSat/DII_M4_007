@@ -29,3 +29,9 @@ document.getElementById('ok').addEventListener('click', function(e){
 document.getElementById('cancel').addEventListener('mousemove', function(e){
     console.log("X = "+e.screenX+" Y = "+e.screenY)
 })
+var elm = document.getElementsByClassName('flex-item');
+for(e of elm){
+    e.addEventListener('mousemove', function(e){
+        console.log("X = "+e.screenX+" Y = "+e.screenY)
+    })
+}
