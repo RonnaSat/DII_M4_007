@@ -16,5 +16,16 @@
 // showDate.addEventListener("dblclick", function (e) {
 //     document.getElementById("emtySpace").innerText = "";
 // })
-var newtext = "<i><b>Ronnakon<b><i>";
-document.getElementById("no").innerHTML = newtext;
+
+
+// var newtext = "<i><b>Ronnakon</b></i>";
+// document.getElementById("no").innerHTML = newtext;
+
+document.getElementById('ok').addEventListener('click', function(e){
+    alert("lol")
+    console.log(e)
+})
+
+document.getElementById('cancel').addEventListener('mousemove', function(e){
+    console.log("X = "+e.screenX+" Y = "+e.screenY)
+})
