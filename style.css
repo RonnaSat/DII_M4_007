@@ -3,6 +3,11 @@
     justify-content: center;
     background-color: lightgray;
 }
+.container2 {
+    display: flex;
+    justify-content: center;
+    background-color: lightskyblue;
+}
 
 .flex-item {
     flex-basis: 50px;
@@ -33,4 +38,11 @@
 }
 .toggleOff{
     background-color: darkgray;
+}
+#emtySpace{
+    font-size: 5rem;
+    background-color: red;
+    color: green;
+    border: 2px solid blue;
+    max-width: 20rem;
 }
