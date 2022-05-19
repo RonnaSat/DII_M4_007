@@ -43,43 +43,92 @@
 //         alert(id)
 //     })
 // }
-document.getElementById('ok').addEventListener('click', function (e) {
-    let noElement = document.getElementById('no')
-    if (noElement.classList.contains('toggleOn')) {
-        noElement.classList.replace('toggleOn', 'toggleOff')
-    } else if (noElement.classList.contains('toggleOff')) {
-        noElement.classList.replace('toggleOff', 'toggleOn')
-    } else {
-        noElement.classList.add('toggleOn')
-    }
-})
 
-let oMargin = 20;
-document.getElementById('ok').addEventListener('click', function (e) {
-    oMargin += 5;
-    let margin = `20px ${oMargin}px`;
-    document.getElementById('cancel').style.margin = margin;
-    document.getElementById('no').style.margin = margin;
-})
+// document.getElementById('ok').addEventListener('click', function (e) {
+//     let noElement = document.getElementById('no')
+//     if (noElement.classList.contains('toggleOn')) {
+//         noElement.classList.replace('toggleOn', 'toggleOff')
+//     } else if (noElement.classList.contains('toggleOff')) {
+//         noElement.classList.replace('toggleOff', 'toggleOn')
+//     } else {
+//         noElement.classList.add('toggleOn')
+//     }
+// })
 
-const showText = ['วิชานี้','ง่าย','จริงๆ นะ','ok'];
-let i = 0;
-document.getElementById('no').addEventListener('dblclick', function (e) {
-    let okElement = document.getElementById('ok')
-    // if (okElement.innerText == "ok") {
-    //     okElement.innerText = "วิชานี้";
-    // } else if (okElement.innerText == "วิชานี้") {
-    //     okElement.innerText = "ง่าย";
-    // } else if (okElement.innerText == "ง่าย") {
-    //     okElement.innerText = "จริงๆ นะ";
-    // } else {
-    //     okElement.innerText = "ok";
-    // }
-    okElement.innerText = showText[i]
-    i++
-    if(i=showText.length){
-        i=0;
-    }
+// let oMargin = 20;
+// document.getElementById('ok').addEventListener('click', function (e) {
+//     oMargin += 5;
+//     let margin = `20px ${oMargin}px`;
+//     document.getElementById('cancel').style.margin = margin;
+//     document.getElementById('no').style.margin = margin;
+// })
+
+// const showText = ['วิชานี้','ง่าย','จริงๆ นะ','ok'];
+// let i = 0;
+// document.getElementById('no').addEventListener('dblclick', function (e) {
+//     let okElement = document.getElementById('ok')
+//     // if (okElement.innerText == "ok") {
+//     //     okElement.innerText = "วิชานี้";
+//     // } else if (okElement.innerText == "วิชานี้") {
+//     //     okElement.innerText = "ง่าย";
+//     // } else if (okElement.innerText == "ง่าย") {
+//     //     okElement.innerText = "จริงๆ นะ";
+//     // } else {
+//     //     okElement.innerText = "ok";
+//     // }
+//     okElement.innerText = showText[i]
+//     i++
+//     if(i=showText.length){
+//         i=0;
+//     }
 
 
+// })
+// function onOkClicked(e){
+//     e.stopPropagation();
+//     alert('ok clicked')
+// }
+// function onCancelClicked(e){
+//     e.stopPropagation();
+//     alert('cancel clicked')
+// }
+// function onNoClicked(e){
+//     e.stopPropagation();
+//     alert('no clicked')
+// }
+
+// document.getElementById('cancel').addEventListener('click', onCancelClicked)
+// document.getElementById('no').onclick = onNoClicked
+
+// document.getElementById('container').addEventListener('click', function(e){
+//     alert('container clicked')
+// })
+
+let outputElement = document.getElementById('emtySpace')
+let output = ''
+function onOkClicked(e){
+    e.stopPropagation();
+    // alert('ok clicked')
+    inputText('ok')
+}
+function onCancelClicked(e){
+    e.stopPropagation();
+    // alert('no clicked')
+    inputText('cancel')
+}
+function onNoClicked(e){
+    e.stopPropagation();
+    // alert('no clicked')
+    inputText('No')
+}
+
+function inputText(input){
+    output = output + input +' '
+    outputElement.innerText = output
+}
+document.getElementById('ok').addEventListener('click', onOkClicked)
+document.getElementById('cancel').addEventListener('click', onCancelClicked)
+document.getElementById('no').addEventListener('click', onNoClicked)
+document.getElementById('container').addEventListener('click', function(){
+    outputElement.innerText = ''
 })

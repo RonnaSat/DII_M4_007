@@ -24,9 +24,9 @@
 }
 
 #no {
-    /* background-color: lightgreen;
+    background-color: lightgreen;
     color: black;
-    border: 2px solid greenyellow; */
+    border: 2px solid greenyellow;
 }
 .toggleOn{
     background-color: white;
