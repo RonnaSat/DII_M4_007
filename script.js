@@ -62,18 +62,24 @@ document.getElementById('ok').addEventListener('click', function (e) {
     document.getElementById('no').style.margin = margin;
 })
 
+const showText = ['วิชานี้','ง่าย','จริงๆ นะ','ok'];
+let i = 0;
 document.getElementById('no').addEventListener('dblclick', function (e) {
     let okElement = document.getElementById('ok')
-    if (okElement.innerText == "ok") {
-        okElement.innerText = "วิชานี้";
-    } else if (okElement.innerText == "วิชานี้") {
-        okElement.innerText = "ง่าย";
-    } else if (okElement.innerText == "ง่าย") {
-        okElement.innerText = "จริงๆ นะ";
-    } else {
-        okElement.innerText = "ok";
+    // if (okElement.innerText == "ok") {
+    //     okElement.innerText = "วิชานี้";
+    // } else if (okElement.innerText == "วิชานี้") {
+    //     okElement.innerText = "ง่าย";
+    // } else if (okElement.innerText == "ง่าย") {
+    //     okElement.innerText = "จริงๆ นะ";
+    // } else {
+    //     okElement.innerText = "ok";
+    // }
+    okElement.innerText = showText[i]
+    i++
+    if(i=showText.length){
+        i=0;
     }
-
 
 
 })
