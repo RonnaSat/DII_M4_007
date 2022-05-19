@@ -132,23 +132,23 @@ function inputText(input) {
 document.getElementById('container').addEventListener('click', function () {
     outputElement.innerText = ''
 })
-let keys = {
-    'ok': 'OK',
-    'cancel': 'Cancel',
-    'no': 'No'
-}
-let elems = document.getElementsByClassName('flex-item')
-for (let e of elems) {
-    e.addEventListener('click', function (e) {
-        e.stopPropagation()
-        console.log(e.innerText)
-        // inputText(keys[e.innerText])
-    })
-}
+// let keys = {
+//     'ok': 'OK',
+//     'cancel': 'Cancel',
+//     'no': 'No'
+// }
+// let elems = document.getElementsByClassName('flex-item')
+// for (let e of elems) {
+//     e.addEventListener('click', function (e) {
+//         e.stopPropagation()
+//         console.log(e.innerText)
+//         // inputText(keys[e.innerText])
+//     })
+// }
 
 var outputContainer = document.getElementById('output-container')
 var counter = 0
-function addNode(){
+function addNode() {
     newNode = document.createElement('div')
     newNode.classList.add('flex-item')
     newNode.setAttribute('id',counter)
@@ -156,5 +156,6 @@ function addNode(){
     counter++
     newNode.innerText = counter;
     outputContainer.appendChild(newNode)
+
 }
-// document.getElementById('ok').addEventListener('click', addNode)
+document.getElementById('ok').addEventListener('click', addNode)
