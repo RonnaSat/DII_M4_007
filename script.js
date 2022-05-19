@@ -106,29 +106,55 @@
 
 let outputElement = document.getElementById('emtySpace')
 let output = ''
-function onOkClicked(e){
+function onOkClicked(e) {
     e.stopPropagation();
     // alert('ok clicked')
     inputText('ok')
 }
-function onCancelClicked(e){
+function onCancelClicked(e) {
     e.stopPropagation();
     // alert('no clicked')
     inputText('cancel')
 }
-function onNoClicked(e){
+function onNoClicked(e) {
     e.stopPropagation();
     // alert('no clicked')
     inputText('No')
 }
 
-function inputText(input){
-    output = output + input +' '
+function inputText(input) {
+    output = output + input + ' '
     outputElement.innerText = output
 }
-document.getElementById('ok').addEventListener('click', onOkClicked)
-document.getElementById('cancel').addEventListener('click', onCancelClicked)
-document.getElementById('no').addEventListener('click', onNoClicked)
-document.getElementById('container').addEventListener('click', function(){
+// document.getElementById('ok').addEventListener('click', onOkClicked)
+// document.getElementById('cancel').addEventListener('click', onCancelClicked)
+// document.getElementById('no').addEventListener('click', onNoClicked)
+document.getElementById('container').addEventListener('click', function () {
     outputElement.innerText = ''
 })
+let keys = {
+    'ok': 'OK',
+    'cancel': 'Cancel',
+    'no': 'No'
+}
+let elems = document.getElementsByClassName('flex-item')
+for (let e of elems) {
+    e.addEventListener('click', function (e) {
+        e.stopPropagation()
+        console.log(e.innerText)
+        // inputText(keys[e.innerText])
+    })
+}
+
+var outputContainer = document.getElementById('output-container')
+var counter = 0
+function addNode(){
+    newNode = document.createElement('div')
+    newNode.classList.add('flex-item')
+    newNode.setAttribute('id',counter)
+    newNode.innerText = counter
+    counter++
+    newNode.innerText = counter;
+    outputContainer.appendChild(newNode)
+}
+// document.getElementById('ok').addEventListener('click', addNode)

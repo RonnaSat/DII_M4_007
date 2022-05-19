@@ -44,5 +44,12 @@
     background-color: red;
     color: green;
     border: 2px solid blue;
-    max-width: 20rem;
+    width: 20rem;
+    min-height: 5rem;
+}
+.output-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    background-color: blue;
 }
